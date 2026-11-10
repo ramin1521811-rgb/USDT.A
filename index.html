@@ -8,8 +8,9 @@
         :root {
             --neon-green: #39ff14;
             --dark-bg: #0a0a0a;
-            --card-bg: #1a1a1a;
+            --card-bg: #151515;
             --text-light: #e0e0e0;
+            --gold: #f0b90b;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -21,40 +22,52 @@
             flex-direction: column;
             align-items: center;
         }
+        /* نوار بالایی شبکه BNB */
+        .top-bar {
+            background-color: var(--gold);
+            color: #000;
+            width: 100%;
+            text-align: center;
+            padding: 8px 0;
+            font-weight: bold;
+            font-size: 0.9em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+        .top-bar img {
+            width: 20px;
+            height: 20px;
+        }
         header {
             text-align: center;
             padding: 40px 20px;
             width: 100%;
             box-sizing: border-box;
+            position: relative;
         }
+        /* لوگو بزرگ‌تر و درخشان‌تر */
         .logo {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
-            border: 3px solid var(--neon-green);
-            box-shadow: 0 0 20px var(--neon-green);
+            border: 4px solid var(--gold);
+            box-shadow: 0 0 30px var(--gold), 0 0 60px var(--gold);
             margin-bottom: 20px;
+            object-fit: cover;
+            background-color: #000;
         }
         h1 {
-            font-size: 2.5em;
+            font-size: 2.8em;
             margin: 0;
-            color: var(--neon-green);
-            text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+            color: var(--gold);
+            text-shadow: 0 0 15px rgba(240, 185, 11, 0.6);
         }
         .tagline {
             font-size: 1.2em;
             margin-top: 10px;
             color: #aaa;
-        }
-        .network-badge {
-            background-color: #2a2a2a;
-            border: 1px solid var(--neon-green);
-            padding: 5px 15px;
-            border-radius: 20px;
-            display: inline-block;
-            margin-top: 15px;
-            font-weight: bold;
-            color: var(--neon-green);
         }
         .buttons {
             display: flex;
@@ -75,13 +88,13 @@
             gap: 10px;
         }
         .btn-primary {
-            background-color: var(--neon-green);
+            background-color: var(--gold);
             color: #000;
-            box-shadow: 0 0 15px rgba(57, 255, 20, 0.6);
+            box-shadow: 0 0 15px rgba(240, 185, 11, 0.6);
         }
         .btn-primary:hover {
-            background-color: #2ecc71;
-            box-shadow: 0 0 25px rgba(57, 255, 20, 0.9);
+            background-color: #fff;
+            box-shadow: 0 0 25px rgba(240, 185, 11, 1);
         }
         .btn-secondary {
             background-color: transparent;
@@ -106,7 +119,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.5);
         }
         .card h2 {
-            color: var(--neon-green);
+            color: var(--gold);
             border-bottom: 2px solid #333;
             padding-bottom: 10px;
             margin-top: 0;
@@ -125,7 +138,7 @@
         }
         .stat-value {
             font-size: 1.5em;
-            color: var(--neon-green);
+            color: var(--gold);
             font-weight: bold;
         }
         .stat-label {
@@ -152,14 +165,19 @@
             border-radius: 10px;
             border: 1px solid #333;
         }
-        .links-list a {
+        .links-list a, .featured-list a {
             display: block;
-            color: var(--neon-green);
+            color: var(--gold);
             text-decoration: none;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             font-size: 1.1em;
+            background: #222;
+            padding: 10px;
+            border-radius: 5px;
+            transition: 0.2s;
         }
-        .links-list a:hover {
+        .links-list a:hover, .featured-list a:hover {
+            background: #333;
             text-decoration: underline;
         }
         .footer {
@@ -174,11 +192,16 @@
 </head>
 <body>
 
+    <!-- نوار مشخصات شبکه BNB -->
+    <div class="top-bar">
+        <img src="https://cryptologos.cc/logos/bnb-bnb-logo.png" alt="BNB">
+        BNB Smart Chain (BEP-20)
+    </div>
+
     <header>
         <img src="https://raw.githubusercontent.com/ramin1521811-rgb/USDT.A/main/IMG_6003.png" alt="USDT.A Logo" class="logo">
         <h1>USDT.A</h1>
-        <div class="tagline">Next 100x Gem on BNB Chain</div>
-        <div class="network-badge">🟢 BNB Smart Chain (BEP-20)</div>
+        <div class="tagline">The Future of Value on BSC</div>
         
         <div class="buttons">
             <a href="https://pancakeswap.finance/swap?outputCurrency=0x9B85a2f589812E2eDc4d7f8662d6D06bB9D49FDf" class="btn btn-primary" target="_blank">🛒 Buy on PancakeSwap</a>
@@ -188,14 +211,25 @@
 
     <div class="container">
         
+        <!-- چارت آنلاین CoinMarketCap -->
         <div class="card">
-            <h2>Live Chart</h2>
-            <iframe src="https://dexscreener.com/bsc/0x9B85a2f589812E2eDc4d7f8662d6D06bB9D49FDf?embed=1&theme=dark" style="width:100%; height:400px; border:none;"></iframe>
+            <h2>Live Chart (CoinMarketCap)</h2>
+            <iframe src="https://coinmarketcap.com/dexscan/bsc/0x9B85a2f589812E2eDc4d7f8662d6D06bB9D49FDf/" style="width:100%; height:500px; border:none;"></iframe>
         </div>
 
         <div class="card">
             <h2>About USDT.A</h2>
             <p>USDT.A is a community-driven BEP-20 token on BNB Smart Chain, designed for long-term growth and transparency. With renounced ownership and locked liquidity, USDT.A prioritizes security and trust.</p>
+        </div>
+
+        <!-- بخش دیده شدن در پلتفرم‌ها -->
+        <div class="card">
+            <h2>Featured On</h2>
+            <div class="featured-list">
+                <a href="https://coinsniper.net" target="_blank">✅ Listed on CoinSniper (Logo Verified)</a>
+                <a href="https://top100token.com" target="_blank">✅ Listed on Top100Token</a>
+                <a href="https://www.geckoterminal.com/bsc/pools/0x9B85a2f589812E2eDc4d7f8662d6D06bB9D49FDf" target="_blank">✅ Tracked on GeckoTerminal</a>
+            </div>
         </div>
 
         <div class="card">
@@ -228,7 +262,7 @@
                 <li><span>Mintable</span> <span class="cross">No</span></li>
                 <li><span>Tax Modifiable</span> <span class="cross">No</span></li>
                 <li><span>Ownership</span> <span class="check">Renounced</span></li>
-                <li><span>Liquidity</span> <span class="check">Locked (PinkLock V2)</span></li>
+                <li><span>Liquidity</span> <span class="check">Locked</span></li>
             </ul>
         </div>
 
@@ -236,17 +270,21 @@
             <h2>Team</h2>
             <p><strong>Founder:</strong> Alireza Mahmoudi</p>
             <p><strong>Role:</strong> Founder & Developer</p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/ramin1521811-rgb" target="_blank" style="color: var(--neon-green);">github.com/ramin1521811-rgb</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/ramin1521811-rgb" target="_blank" style="color: var(--gold);">github.com/ramin1521811-rgb</a></p>
         </div>
 
+        <!-- لینک‌های رسمی با ایمیل و کوین‌گکو -->
         <div class="card">
             <h2>Official Links</h2>
             <div class="links-list">
+                <a href="mailto:ramin1521811@yahoo.com">📧 Email: ramin1521811@yahoo.com</a>
                 <a href="https://x.com/Usdt_A_BNB" target="_blank">🐦 Twitter (X)</a>
                 <a href="https://t.me/usdtaofficial" target="_blank">📩 Telegram</a>
                 <a href="https://github.com/ramin1521811-rgb/USDT.A" target="_blank">💻 GitHub Repository</a>
                 <a href="https://bscscan.com/token/0x9B85a2f589812E2eDc4d7f8662d6D06bB9D49FDf" target="_blank">🛡️ BscScan Contract</a>
                 <a href="https://dexscreener.com/bsc/0x9B85a2f589812E2eDc4d7f8662d6D06bB9D49FDf" target="_blank">📈 DexScreener</a>
+                <a href="https://www.geckoterminal.com/bsc/pools/0x9B85a2f589812E2eDc4d7f8662d6D06bB9D49FDf" target="_blank">🦎 CoinGecko (GeckoTerminal)</a>
+                <a href="https://pump.fun/profile/usdtA" target="_blank">🚀 Pump.fun Profile</a>
             </div>
         </div>
 
