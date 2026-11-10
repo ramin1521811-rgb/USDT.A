@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USDT.A | Next 100x Gem on BNB Chain</title>
+    <title>USDT.A | Next 100x Gem on BSC</title>
     <style>
         :root {
-            --neon-green: #39ff14;
-            --dark-bg: #0a0a0a;
-            --card-bg: #151515;
-            --text-light: #e0e0e0;
             --gold: #f0b90b;
+            --neon-red: #ff3333;
+            --dark-bg: #050505;
+            --card-bg: #111111;
+            --text-light: #e0e0e0;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -40,34 +40,43 @@
             width: 20px;
             height: 20px;
         }
+        /* هدر هیجانی */
         header {
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
             width: 100%;
             box-sizing: border-box;
-            position: relative;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #050505 100%);
+            border-bottom: 2px solid var(--gold);
         }
-        /* لوگو بزرگ‌تر و درخشان‌تر */
         .logo {
-            width: 180px;
-            height: 180px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             border: 4px solid var(--gold);
-            box-shadow: 0 0 30px var(--gold), 0 0 60px var(--gold);
+            box-shadow: 0 0 30px var(--gold), 0 0 60px var(--neon-red);
             margin-bottom: 20px;
             object-fit: cover;
             background-color: #000;
         }
         h1 {
-            font-size: 2.8em;
+            font-size: 3em;
             margin: 0;
             color: var(--gold);
-            text-shadow: 0 0 15px rgba(240, 185, 11, 0.6);
+            text-shadow: 0 0 15px rgba(240, 185, 11, 0.8), 0 0 30px rgba(255, 51, 51, 0.5);
         }
         .tagline {
-            font-size: 1.2em;
+            font-size: 1.3em;
             margin-top: 10px;
-            color: #aaa;
+            color: var(--neon-red);
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { opacity: 1; }
         }
         .buttons {
             display: flex;
@@ -90,20 +99,24 @@
         .btn-primary {
             background-color: var(--gold);
             color: #000;
-            box-shadow: 0 0 15px rgba(240, 185, 11, 0.6);
+            box-shadow: 0 0 20px rgba(240, 185, 11, 0.8);
         }
         .btn-primary:hover {
             background-color: #fff;
-            box-shadow: 0 0 25px rgba(240, 185, 11, 1);
+            box-shadow: 0 0 30px rgba(240, 185, 11, 1);
+            transform: scale(1.05);
         }
         .btn-secondary {
             background-color: transparent;
-            color: var(--neon-green);
-            border: 2px solid var(--neon-green);
+            color: #fff;
+            border: 2px solid var(--neon-red);
+            box-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
         }
         .btn-secondary:hover {
-            background-color: var(--neon-green);
+            background-color: var(--neon-red);
             color: #000;
+            box-shadow: 0 0 20px rgba(255, 51, 51, 0.8);
+            transform: scale(1.05);
         }
         .container {
             width: 90%;
@@ -159,8 +172,8 @@
         .security-list li:last-child {
             border-bottom: none;
         }
-        .check { color: var(--neon-green); font-weight: bold; }
-        .cross { color: #ff4d4d; font-weight: bold; }
+        .check { color: #39ff14; font-weight: bold; }
+        .cross { color: var(--neon-red); font-weight: bold; }
         iframe {
             border-radius: 10px;
             border: 1px solid #333;
@@ -188,6 +201,13 @@
             border-top: 1px solid #333;
             width: 100%;
         }
+        /* استایل عکس هیجانی */
+        .hype-image {
+            width: 100%;
+            border-radius: 10px;
+            border: 2px solid var(--gold);
+            margin-top: 15px;
+        }
     </style>
 </head>
 <body>
@@ -201,7 +221,7 @@
     <header>
         <img src="https://raw.githubusercontent.com/ramin1521811-rgb/USDT.A/main/IMG_6003.png" alt="USDT.A Logo" class="logo">
         <h1>USDT.A</h1>
-        <div class="tagline">The Future of Value on BSC</div>
+        <div class="tagline">🔥 PUMP INCOMING! ARE YOU READY? 🚀</div>
         
         <div class="buttons">
             <a href="https://pancakeswap.finance/swap?outputCurrency=0x9B85a2f589812E2eDc4d7f8662d6D06bB9D49FDf" class="btn btn-primary" target="_blank">🛒 Buy on PancakeSwap</a>
@@ -211,10 +231,25 @@
 
     <div class="container">
         
-        <!-- چارت آنلاین CoinMarketCap -->
+        <!-- بخش عکس هیجانی -->
         <div class="card">
-            <h2>Live Chart (CoinMarketCap)</h2>
-            <iframe src="https://coinmarketcap.com/dexscan/bsc/0x9B85a2f589812E2eDc4d7f8662d6D06bB9D49FDf/" style="width:100%; height:500px; border:none;"></iframe>
+            <h2>Community & Hype</h2>
+            <p>Join the movement on BSC. The community is growing and the next wave is loading!</p>
+            <!-- لینک عکس هیجانی خودت رو اینجا بذار (مثلا عکس پامپ یا بنر بون فایر) -->
+            <img src="https://raw.githubusercontent.com/ramin1521811-rgb/USDT.A/main/banner.jpg" alt="USDT.A Hype" class="hype-image" onerror="this.style.display='none'">
+        </div>
+
+        <!-- چارت آنلاین DexScreener -->
+        <div class="card">
+            <h2>📊 Live Chart (DexScreener)</h2>
+            <iframe src="https://dexscreener.com/bsc/0x9B85a2f589812E2eDc4d7f8662d6D06bB9D49FDf?embed=1&theme=dark" style="width:100%; height:500px; border:none;"></iframe>
+            
+            <!-- دکمه‌های لینک به بقیه چارت‌ها -->
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px;">
+                <a href="https://bscscan.com/token/0x9B85a2f589812E2eDc4d7f8662d6D06bB9D49FDf" target="_blank" class="btn btn-secondary" style="font-size: 0.8em; padding: 10px 15px;">🛡️ BscScan</a>
+                <a href="https://coinmarketcap.com/dexscan/bsc/0x9B85a2f589812E2eDc4d7f8662d6D06bB9D49FDf/" target="_blank" class="btn btn-secondary" style="font-size: 0.8em; padding: 10px 15px;">📊 CoinMarketCap</a>
+                <a href="https://www.geckoterminal.com/bsc/pools/0x9B85a2f589812E2eDc4d7f8662d6D06bB9D49FDf" target="_blank" class="btn btn-secondary" style="font-size: 0.8em; padding: 10px 15px;">🦎 GeckoTerminal</a>
+            </div>
         </div>
 
         <div class="card">
@@ -273,7 +308,7 @@
             <p><strong>GitHub:</strong> <a href="https://github.com/ramin1521811-rgb" target="_blank" style="color: var(--gold);">github.com/ramin1521811-rgb</a></p>
         </div>
 
-        <!-- لینک‌های رسمی با ایمیل و کوین‌گکو -->
+        <!-- لینک‌های رسمی -->
         <div class="card">
             <h2>Official Links</h2>
             <div class="links-list">
@@ -290,7 +325,7 @@
 
         <div class="card">
             <h2>Contract Address</h2>
-            <p style="word-break: break-all; background: #000; padding: 10px; border-radius: 5px; border: 1px solid #333;">
+            <p style="word-break: break-all; background: #000; padding: 10px; border-radius: 5px; border: 1px solid #333; color: var(--gold);">
                 0x9B85a2f589812E2eDc4d7f8662d6D06bB9D49FDf
             </p>
         </div>
